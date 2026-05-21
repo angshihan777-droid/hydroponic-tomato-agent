@@ -23,7 +23,18 @@ def main() -> None:
     state.update(environment_agent(state))
     result = risk_agent(state)
 
+    assert "risk_report" in result
+    assert "risk_level" in result
+    assert result["risk_level"] in {"low", "medium", "high"}
+    assert "missing_reports" in result
+    assert isinstance(result["missing_reports"], list)
+    assert "risk_evidence" in result
+    assert isinstance(result["risk_evidence"], list)
+
     print("风险专家返回字段：", list(result.keys()))
+    print("风险等级：", result["risk_level"])
+    print("缺失报告：", result["missing_reports"])
+    print("风险证据：", result["risk_evidence"])
     print("风险专家报告：")
     print(result["risk_report"])
 

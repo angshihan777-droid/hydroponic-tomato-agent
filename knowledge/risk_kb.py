@@ -49,6 +49,6 @@ RISK_KNOWLEDGE: list[RiskKnowledge] = [
         "value": "裂果",
         "finding": "现场观察出现裂果迹象。",
         "suggestion": "重点排查水分波动、湿度变化和膨果期管理稳定性。",
-        "risk_level": "medium",
+        "risk_level": "high",
     },
 ]

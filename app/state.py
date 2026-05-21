@@ -20,6 +20,10 @@ class TomatoState(TypedDict, total=False):
     fertigation_report: str
     environment_report: str
     risk_report: str
+    risk_level: str
+    missing_reports: list[str]
+    risk_evidence: list[str]
+    review_report: str
 
     # 最终输出区：给人看的日报 + 给程序用的结构化结果
     daily_report: str
@@ -53,7 +57,10 @@ def create_initial_state(
         "fertigation_report": "",
         "environment_report": "",
         "risk_report": "",
+        "risk_level": "low",
+        "missing_reports": [],
+        "risk_evidence": [],
+        "review_report": "",
         "daily_report": "",
         "structured_result": {},
     }
-

@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+
+.vscode/
+
+教学文档.md
+开发设计.md
+学习路线.md
+项目可借鉴点.md

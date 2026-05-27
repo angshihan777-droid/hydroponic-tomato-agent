@@ -3,8 +3,8 @@ __pycache__/
 *.pyc
 
 .vscode/
+.local_llm_config.json
 
-教学文档.md
-开发设计.md
-学习路线.md
-项目可借鉴点.md
+*.md
+!README.md
+!backend/knowledge/docs/*.md
